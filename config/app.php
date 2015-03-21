@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => env('DarikSpark', 'SomeRandomString'),
+	'key' => env('APP_KEY', 'SomeRandomString'),
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 

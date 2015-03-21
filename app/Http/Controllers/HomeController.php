@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Bargain;
 
 class HomeController extends Controller {
 
@@ -30,7 +31,11 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
-	}
+//        namespace App;
+        $bargains = Bargain::getAll();
+		return view('home')->with('bargains', $bargains);
+
+//        return $bargains;
+    }
 
 }
